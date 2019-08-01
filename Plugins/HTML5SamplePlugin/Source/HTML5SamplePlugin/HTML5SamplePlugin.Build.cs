@@ -49,5 +49,12 @@ public class HTML5SamplePlugin : ModuleRules
 				// ... add any modules that your module loads dynamically here ...
 			}
 			);
-	}
+
+        if (Target.Platform == UnrealTargetPlatform.HTML5)
+        {
+            string path = System.IO.Path.Combine(ModuleDirectory, "Public/SampleHTML5.js").Replace("\\", "/");
+            System.Console.WriteLine("Include {0}", path);
+            PublicAdditionalLibraries.Add(path);
+        }
+    }
 }

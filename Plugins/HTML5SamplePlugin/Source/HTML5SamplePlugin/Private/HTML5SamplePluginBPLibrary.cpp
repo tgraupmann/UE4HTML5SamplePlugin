@@ -2,6 +2,7 @@
 
 #include "HTML5SamplePluginBPLibrary.h"
 #include "HTML5SamplePlugin.h"
+#include "SampleHTML5.h"
 
 UHTML5SamplePluginBPLibrary::UHTML5SamplePluginBPLibrary(const FObjectInitializer& ObjectInitializer)
 : Super(ObjectInitializer)
@@ -9,8 +10,9 @@ UHTML5SamplePluginBPLibrary::UHTML5SamplePluginBPLibrary(const FObjectInitialize
 
 }
 
-float UHTML5SamplePluginBPLibrary::HTML5SamplePluginSampleFunction(float Param)
+void UHTML5SamplePluginBPLibrary::SampleInit()
 {
-	return -1;
+#if PLATFORM_HTML5
+	UE_InitSampleHTML5();
+#endif
 }
-

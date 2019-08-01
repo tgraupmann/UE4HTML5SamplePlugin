@@ -27,6 +27,6 @@ class UHTML5SamplePluginBPLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
 
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "HTML5SamplePlugin sample test testing"), Category = "HTML5SamplePluginTesting")
-	static float HTML5SamplePluginSampleFunction(float Param);
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "SampleInit", Keywords = "Invoke Sample JS"), Category = "Sample")
+	static void SampleInit();
 };
