@@ -29,4 +29,6 @@ class UHTML5SamplePluginBPLibrary : public UBlueprintFunctionLibrary
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "SampleInit", Keywords = "Invoke Sample JS"), Category = "Sample")
 	static void SampleInit();
+
+	static void Callback_RegisterStringFunction(const char* str);
 };

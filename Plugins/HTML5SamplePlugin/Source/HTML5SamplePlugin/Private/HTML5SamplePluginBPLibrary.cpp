@@ -12,7 +12,17 @@ UHTML5SamplePluginBPLibrary::UHTML5SamplePluginBPLibrary(const FObjectInitialize
 
 void UHTML5SamplePluginBPLibrary::SampleInit()
 {
+#ifdef __EMSCRIPTEN__
+	/* register the listener */
+	SampleHTML5_RegisterStringFunction(&Callback_RegisterStringFunction);
+#endif
+
 #if PLATFORM_HTML5
 	UE_InitSampleHTML5();
 #endif
+}
+
+void UHTML5SamplePluginBPLibrary::Callback_RegisterStringFunction(const char* str)
+{
+	UE_LOG(LogTemp, Log, TEXT("UHTML5SamplePluginBPLibrary::Callback_RegisterStringFunction invoked\r\n"));
 }
