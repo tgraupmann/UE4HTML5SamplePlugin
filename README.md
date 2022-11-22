@@ -11,3 +11,7 @@ The intent of this project is to include custom HTML5 (provided from a UE4 Plugi
 * [UE4HTML5SampleSource](https://github.com/tgraupmann/UE4HTML5SampleSource) - Include HTML5 from game source
 
 * [UE4HTML5SamplePlugin](https://github.com/tgraupmann/UE4HTML5SamplePlugin) - Include HTML5 from a UE4 plugin
+
+## Support
+
+Support is available on Discord, you can reach me at `Tim Graupmann#0611`.
